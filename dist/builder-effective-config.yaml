@@ -1,0 +1,23 @@
+directories:
+  output: ./dist/
+  buildResources: ./resources/installer/
+  app: .
+productName: Digital-PBS
+appId: com.Digital-PBS
+asar: true
+extraResources:
+  - filter:
+      - src/DBs/database.db
+protocols:
+  name: helloElectron
+  schemes:
+    - helloelectron
+win:
+  target:
+    - zip
+    - nsis
+  icon: ./resources/installer/Icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 8.5.5

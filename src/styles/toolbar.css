@@ -1,0 +1,12 @@
+#Toolbar_Title_Button{
+    padding-top: 6px
+}
+
+#Toolbar_Title_Button:hover{
+    background-color: lightgray;
+}
+
+#Toolbar_Title_Text {
+    font-size: 1.6em;
+    font-weight: bolder;
+}

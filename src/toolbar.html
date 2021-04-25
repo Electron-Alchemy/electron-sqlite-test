@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toolbar</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="styles/toolbar.css"/>
+</head>
+
+<body>
+    <v-app-bar dense fixed app>
+        <v-app-bar-nav-icon @click="showSystemNaviDrawer()"></v-app-bar-nav-icon>
+        <v-toolbar-title>DPBS</v-toolbar-title>
+    
+        <v-spacer/>
+    
+        <v-toolbar-items>
+          <div flat plain title color="black" id="Toolbar_Title_Button" @click="showChartList()">
+            <v-text id="Toolbar_Title_Text">{{current_book_name}} {{current_chapter}}장</v-text>
+          </div>
+        </v-toolbar-items>
+        
+        <v-spacer/>
+    
+        <v-btn icon>
+          <v-icon>mdi-brush</v-icon>
+        </v-btn>
+    
+        <v-btn icon @click="showfunctionNaviDrawer()">
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+            
+      </v-app-bar>
+
+    <script src="scripts/toolbar.js"></script>
+</body>
+
+</html>

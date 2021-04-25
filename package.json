@@ -1,0 +1,59 @@
+{
+  "name": "Digital-PBS",
+  "version": "1.0.0",
+  "description": "Personal Bible Study Program",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:ia32",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^8.0.0",
+    "electron-builder": "^22.3.2"
+  },
+  "build": {
+    "productName": "Digital-PBS",
+    "appId": "com.Digital-PBS",
+    "asar": true,
+    "extraResources": [
+      "src/DBs/database.db"
+    ],
+    "protocols": {
+      "name": "helloElectron",
+      "schemes": [
+        "helloelectron"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/installer/Icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./dist/",
+      "app": "."
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "sqlite3": "^4.2.0"
+  }
+}
