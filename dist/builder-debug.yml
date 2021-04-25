@@ -13,8 +13,8 @@ ia32:
   nodeModuleFilePatterns: []
 nsis:
   script: |-
-    !include "/Users/songdaesun/programming/sqlite-electron/node_modules/app-builder-lib/templates/nsis/include/StdUtils.nsh"
-    !addincludedir "/Users/songdaesun/programming/sqlite-electron/node_modules/app-builder-lib/templates/nsis/include"
+    !include "/Users/songdaesun/programming/electron-sqlite-test/node_modules/app-builder-lib/templates/nsis/include/StdUtils.nsh"
+    !addincludedir "/Users/songdaesun/programming/electron-sqlite-test/node_modules/app-builder-lib/templates/nsis/include"
     !macro _isUpdated _a _b _t _f
       ${StdUtils.TestParameter} $R9 "updated"
       StrCmp "$R9" "true" `${_t}` `${_f}`
@@ -87,8 +87,8 @@ nsis:
     !macroend
 
     !addplugindir /x86-unicode "/Users/songdaesun/Library/Caches/electron-builder/nsis/nsis-resources-3.4.1/plugins/x86-unicode"
-    !include "/private/var/folders/jx/9n3gh99n7nn0kv2xy3yjn7c40000gn/T/t-cpuahx/0-messages.nsh"
-    !include "/private/var/folders/jx/9n3gh99n7nn0kv2xy3yjn7c40000gn/T/t-cpuahx/1-messages.nsh"
+    !include "/private/var/folders/jx/9n3gh99n7nn0kv2xy3yjn7c40000gn/T/t-LGEXaA/0-messages.nsh"
+    !include "/private/var/folders/jx/9n3gh99n7nn0kv2xy3yjn7c40000gn/T/t-LGEXaA/1-messages.nsh"
 
     Var newStartMenuLink
     Var oldStartMenuLink
